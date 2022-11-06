@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pricing Section Of Responsive Hotel Website </title>
+
+    <!-- FAVICON -->
+    <link rel="icon" type="image/png" href="Assest/favicon.png">
+
+    <!-- Bootstrap 5 CDN Links -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/5.1.0/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+
+</head>
+
+<body data-bs-spy="scroll" data-bs-target=".navbar" data-bs-offset="100">
+
+    <!-- Pricing section -->
+    <style>
+        /* 1 General */
+@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@200;300;400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap');
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+:root {
+    /* Background Color */
+    --primary-color: #021832;
+    --secondary-color: #caa169;
+    --bg-color: #f4f4f4;
+    --bg-white: #fff;
+    --bg-black: #000;
+
+    /* Text Style */
+    --primary-font: 'Poppins', sans-serif;
+    --secondary-font: 'Oswald', sans-serif;
+    --primary-text: #021832;
+    --secondary-text: #caa169;
+    --text-white: #fff;
+    --text-black: #151515;
+    --text-gray: #e4e4e4;
+}
+
+body {
+    font-family: var(--primary-font);
+    background-color: var(--bg-white);
+}
+
+a {
+    text-decoration: none;
+}
+
+::-webkit-scrollbar {
+    width: .375rem;
+}
+
+::-webkit-scrollbar-track {
+    background: var(--secondary-color);
+}
+
+::-webkit-scrollbar-thumb {
+    background: var(--primary-color);
+}
+
+section {
+    padding: 3.125rem 0;
+}
+
+.main-btn {
+    font-size: 1rem;
+    font-weight: 500;
+    color: var(--primary-color);
+    text-transform: uppercase;
+    background-color: transparent;
+    border: .0625rem solid var(--primary-color);
+    padding: .375rem 1.875rem;
+    border-radius: 3.125rem;
+    line-height: 1.75rem;
+    display: inline-block;
+    transition: all 0.3s ease-out 0s;
+}
+
+.main-btn:hover {
+    background-color: var(--secondary-color);
+    border-color: var(--secondary-color);
+    color: var(--text-white);
+}
+
+
+
+h5 {
+    font-size: 1.5rem;
+    line-height: 1;
+    color: var(--primary-text);
+    margin-bottom: .9375rem;
+    font-weight: 500;
+    font-family: var(--secondary-font);
+
+}
+
+h6 {
+    font-size: .875rem;
+    color: var(--primary-text);
+    margin-bottom: .9375rem;
+    text-transform: uppercase;
+    font-weight: 300;
+    font-family: var(--secondary-font);
+}
+
+p {
+    font-size: 1rem;
+    color: var(--text-black);
+    line-height: 1.625rem;
+}
+
+.section-title:after {
+    content: "";
+    background-image: url('Assest/title-icon.webp');
+    background-position: center center;
+    background-repeat: no-repeat;
+    display: block;
+    margin-top: -0.9375rem;
+    height: .9375rem;
+}
+
+/*9 pricing section */
+.price_wrapper .card {
+    box-shadow: 0 .125rem .25rem rgb(34 30 31 / 40%);
+    -webkit-transition: all 0.3s ease-in-out;
+    transition: all 0.3s ease-in-out;
+    cursor: pointer;
+}
+
+.price_wrapper .card:hover {
+    background-color: var(--secondary-color);
+}
+
+.price_wrapper .card:hover h3,
+.price_wrapper .card:hover h5,
+.price_wrapper .card:hover p {
+    color: var(--text-white);
+}
+
+.price_wrapper .card:hover .main-btn {
+    color: var(--text-white);
+    border-color: var(--bg-white)
+}
+    </style>
+
+    <!-- Pricing section -->
+    <section id="blog" class="blog_wrapper pb-0">
+        <div class="container">
+            <div class="row">
+                <div class="col-sm-12 section-title text-center mb-5">
+                    <h6>Say Hello TO Our Visiters</h6>
+                    <h3>Our Blog</h3>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-6 mb-4">
+                    <div class="card p-0 border-0 rounded-0">
+                        <img src="./blog1.webp" alt="">
+                        <div class="blog-content bg-white p-4">
+                            <h5 class="text-decoration-underline mb-4">Relax Zone</h5>
+                            <h6>By Admin - February 18, 2018</h6>
+                            <p class="mt-2">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Itaque, nostrum.
+                            </p>
+                            <a href="#" class="main-btn mt-2">Read More</a>
+
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6 mb-4">
+                    <div class="card p-0 border-0 rounded-0">
+                        <img src="./blog2.webp" alt="">
+                        <div class="blog-content bg-white p-4">
+                            <h5 class="text-decoration-underline mb-4">Relax Zone</h5>
+                            <h6>By Admin - February 18, 2018</h6>
+                            <p class="mt-2">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Itaque, nostrum.
+                            </p>
+                            <a href="#" class="main-btn mt-2">Read More</a>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Pricing Section Exit  -->
+
+    <!-- Bootstrap 5 JS CDN Links -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/2.9.2/umd/popper.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/5.1.0/js/bootstrap.min.js"></script>
+
+    <!-- Swiper JS -->
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+
+
+</body>
+
+</html>

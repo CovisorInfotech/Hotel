@@ -1,0 +1,272 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rooms Section of Responsive Hotel Website</title>
+
+    <!-- FAVICON -->
+    <link rel="icon" type="image/png" href="Assest/favicon.png">
+
+    <!-- Bootstrap 5 CDN Links -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/5.1.0/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+
+</head>
+
+<body data-bs-spy="scroll" data-bs-target=".navbar" data-bs-offset="100">
+    <!-- Rooms section -->
+    <style>
+        /* 1 General */
+@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@200;300;400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap');
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+:root {
+    /* Background Color */
+    --primary-color: #021832;
+    --secondary-color: #caa169;
+    --bg-color: #f4f4f4;
+    --bg-white: #fff;
+    --bg-black: #000;
+
+    /* Text Style */
+    --primary-font: 'Poppins', sans-serif;
+    --secondary-font: 'Oswald', sans-serif;
+    --primary-text: #021832;
+    --secondary-text: #caa169;
+    --text-white: #fff;
+    --text-black: #151515;
+    --text-gray: #e4e4e4;
+}
+
+body {
+    font-family: var(--primary-font);
+    background-color: var(--bg-white);
+}
+
+a {
+    text-decoration: none;
+}
+
+::-webkit-scrollbar {
+    width: .375rem;
+}
+
+::-webkit-scrollbar-track {
+    background: var(--secondary-color);
+}
+
+::-webkit-scrollbar-thumb {
+    background: var(--primary-color);
+}
+
+section {
+    padding: 3.125rem 0;
+}
+
+.main-btn {
+    font-size: 1rem;
+    font-weight: 500;
+    color: var(--primary-color);
+    text-transform: uppercase;
+    background-color: transparent;
+    border: .0625rem solid var(--primary-color);
+    padding: .375rem 1.875rem;
+    border-radius: 3.125rem;
+    line-height: 1.75rem;
+    display: inline-block;
+    transition: all 0.3s ease-out 0s;
+}
+
+.main-btn:hover {
+    background-color: var(--secondary-color);
+    border-color: var(--secondary-color);
+    color: var(--text-white);
+}
+
+h1 {
+    font-size: 3.75rem;
+    line-height: 4.25rem;
+    font-weight: 700;
+    color: var(--text-white);
+    margin-bottom: 1.25rem;
+    text-transform: uppercase;
+    font-family: var(--secondary-font);
+}
+
+h3 {
+    margin-bottom: 1.875rem;
+    line-height: 2.875rem;
+    font-weight: 700;
+    font-size: 2.25rem;
+    color: var(--primary-text);
+    font-family: var(--secondary-font);
+}
+
+h3 span {
+    color: var(--secondary-text);
+}
+
+h5 {
+    font-size: 1.5rem;
+    line-height: 1;
+    color: var(--primary-text);
+    margin-bottom: .9375rem;
+    font-weight: 500;
+    font-family: var(--secondary-font);
+
+}
+
+h6 {
+    font-size: .875rem;
+    color: var(--primary-text);
+    margin-bottom: .9375rem;
+    text-transform: uppercase;
+    font-weight: 300;
+    font-family: var(--secondary-font);
+}
+
+p {
+    font-size: 1rem;
+    color: var(--text-black);
+    line-height: 1.625rem;
+}
+
+.section-title:after {
+    content: "";
+    background-image: url('Assest/title-icon.webp');
+    background-position: center center;
+    background-repeat: no-repeat;
+    display: block;
+    margin-top: -0.9375rem;
+    height: .9375rem;
+}
+/*5  Rooms */
+.room-item {
+    position: relative;
+    overflow: hidden;
+}
+
+.room-item img {
+    width:100%;
+    -webkit-transition: all 400ms ease-in 0s;
+    transition: all 400ms ease-in 0s;
+}
+
+.room-item:hover img {
+    -webkit-transform: scale3d(1.05, 1.05, 1.05);
+    transform: scale3d(1.05, 1.05, 1.05);
+}
+
+.room-item::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: #000;
+    opacity: 0;
+    z-index: 1;
+    -webkit-transition: all 400ms ease-in 0s;
+    transition: all 400ms ease-in 0s;
+}
+
+.room-item:hover::before {
+    opacity: 0.6;
+}
+
+.room-item .room-item-wrap {
+    left: 1.875rem;
+    right: 1.875rem;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 1;
+}
+
+.room-item .room-content {
+    border: .125rem solid #fff;
+    padding: 5rem 1.875rem;
+    -webkit-transform: scale3d(1.2, 1.2, 1.2);
+    transform: scale3d(1.2, 1.2, 1.2);
+    -webkit-transition: all 500ms ease-in 0s;
+    transition: all 500ms ease-in 0s;
+    opacity: 0;
+}
+
+.room-item:hover .room-content {
+    opacity: 1;
+    -webkit-transform: scale3d(1, 1, 1);
+    transform: scale3d(1, 1, 1);
+}
+    </style>
+    <section id="rooms" class="rooms_wrapper">
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-sm-12 section-title text-center mb-5">
+                    <h6>What I can do for you</h6>
+                    <h3>Our Favorite Rooms</h3>
+                </div>
+            </div>
+            <div class="row m-0">
+                <div class="col-md-4 mb-4 mb-lg-0">
+                    <div class="room-item">
+                        <img src="./room1.webp" class="img-fluid">
+                        <div class="room-item-wrap">
+                            <div class="room-content">
+                                <h5 class="text-white mb-lg-5 text-decoration-underline">Royal Suit</h5>
+                                <p class="text-white">Discover five of our favourite dresses from our new collection
+                                    that
+                                    are destined to be worn and loved immediately</p>
+                                <p class="text-white fw-bold mt-lg-4">$220 / Per Night</p>
+                                <a class="main-btn border-white text-white mt-lg-5" href="#">Book now</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4 mb-4 mb-lg-0">
+                    <div class="room-item">
+                        <img src="./room2.webp" class="img-fluid">
+                        <div class="room-item-wrap">
+                            <div class="room-content">
+                                <h5 class="text-white mb-lg-5 text-decoration-underline">Royal Suit</h5>
+                                <p class="text-white">Discover five of our favourite dresses from our new collection
+                                    that
+                                    are destined to be worn and loved immediately</p>
+                                <p class="text-white fw-bold mt-lg-4">$220 / Per Night</p>
+                                <a class="main-btn border-white text-white mt-lg-5" href="#">Book now</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4 mb-4 mb-lg-0">
+                    <div class="room-item">
+                        <img src="./room3.webp" class="img-fluid">
+                        <div class="room-item-wrap">
+                            <div class="room-content">
+                                <h5 class="text-white mb-lg-5 text-decoration-underline">Royal Suit</h5>
+                                <p class="text-white">Discover five of our favourite dresses from our new collection
+                                    that
+                                    are destined to be worn and loved immediately</p>
+                                <p class="text-white fw-bold mt-lg-4">$220 / Per Night</p>
+                                <a class="main-btn border-white text-white mt-lg-5" href="#">Book now</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+</body>
+
+</html>

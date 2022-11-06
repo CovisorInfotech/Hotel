@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Services section of Responsive Hotel Website</title>
+
+    <!-- FAVICON -->
+    <link rel="icon" type="image/png" href="Assest/favicon.png">
+
+    <!-- Bootstrap 5 CDN Links -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/5.1.0/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+
+
+</head>
+
+<body data-bs-spy="scroll" data-bs-target=".navbar" data-bs-offset="100">
+
+    <!-- Services section -->
+    <style>
+        /* 1 General */
+@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@200;300;400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap');
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+:root {
+    /* Background Color */
+    --primary-color: #021832;
+    --secondary-color: #caa169;
+    --bg-color: #f4f4f4;
+    --bg-white: #fff;
+    --bg-black: #000;
+
+    /* Text Style */
+    --primary-font: 'Poppins', sans-serif;
+    --secondary-font: 'Oswald', sans-serif;
+    --primary-text: #021832;
+    --secondary-text: #caa169;
+    --text-white: #fff;
+    --text-black: #151515;
+    --text-gray: #e4e4e4;
+}
+
+body {
+    font-family: var(--primary-font);
+    background-color: var(--bg-white);
+}
+
+a {
+    text-decoration: none;
+}
+
+section {
+    padding: 3.125rem 0;
+}
+
+
+
+h1 {
+    font-size: 3.75rem;
+    line-height: 4.25rem;
+    font-weight: 700;
+    color: var(--text-white);
+    margin-bottom: 1.25rem;
+    text-transform: uppercase;
+    font-family: var(--secondary-font);
+}
+
+
+
+p {
+    font-size: 1rem;
+    color: var(--text-black);
+    line-height: 1.625rem;
+}
+
+
+
+.counter {
+    background-image: url('Assest/counter-bg.webp');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    padding: 3.125rem;
+    position: relative;
+}
+
+.counter::before {
+    position: absolute;
+    content: "";
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: var(--bg-black);
+    opacity: 0.5;
+    z-index: 1;
+}
+
+.counter h1,
+.counter p {
+    position: relative;
+    z-index: 3;
+    color: var(--text-white)
+}
+
+    </style>
+    <section id="services" class="services_wrapper">
+
+        <div class="counter mt-5">
+            <div class="container">
+                <div class="row text-center">
+                    <div class="col-md-3 mb-lg-0 mb-md-0 mb-5">
+                        <h1>
+                            <span id="count1"></span>+
+                        </h1>
+                        <p>Happy Clients</p>
+                    </div>
+                    <div class="col-md-3 mb-lg-0 mb-md-0 mb-5">
+                        <h1>
+                            <span id="count2"></span>+
+                            </h2>
+                            <p>New Friendships</p>
+                    </div>
+                    <div class="col-md-3 mb-lg-0 mb-md-0 mb-5">
+                        <h1>
+                            <span id="count3"></span>+
+                            </h2>
+                            <p>Five Start Ratings</p>
+                    </div>
+                    <div class="col-md-3 mb-lg-0 mb-md-0 mb-5">
+                        <h1>
+                            <span id="count4"></span>+
+                            </h2>
+                            <p>Served Breakfast</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Services section Exit -->
+
+       <!-- Bootstrap 5 JS CDN Links -->
+       <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/2.9.2/umd/popper.min.js"></script>
+       <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/5.1.0/js/bootstrap.min.js"></script>
+
+    <script>
+        // counter design
+        document.addEventListener("DOMContentLoaded", () => {
+            function counter(id, start, end, duration) {
+                let obj = document.getElementById(id),
+                    current = start,
+                    range = end - start,
+                    increment = end > start ? 1 : -1,
+                    step = Math.abs(Math.floor(duration / range)),
+                    timer = setInterval(() => {
+                        current += increment;
+                        obj.textContent = current;
+                        if (current == end) {
+                            clearInterval(timer);
+                        }
+                    }, step);
+            }
+            counter("count1", 0, 1287, 3000);
+            counter("count2", 100, 5786, 2500);
+            counter("count3", 0, 1440, 3000);
+            counter("count4", 0, 7110, 3000);
+        });
+    </script>
+
+</body>
+
+</html>

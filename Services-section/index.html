@@ -1,0 +1,301 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Services section of Responsive Hotel Website</title>
+
+    <!-- FAVICON -->
+    <link rel="icon" type="image/png" href="Assest/favicon.png">
+
+    <!-- Bootstrap 5 CDN Links -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/5.1.0/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+
+
+</head>
+
+<body data-bs-spy="scroll" data-bs-target=".navbar" data-bs-offset="100">
+
+    <!-- Services section -->
+    <style>
+        /* 1 General */
+@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@200;300;400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap');
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+:root {
+    /* Background Color */
+    --primary-color: #021832;
+    --secondary-color: #caa169;
+    --bg-color: #f4f4f4;
+    --bg-white: #fff;
+    --bg-black: #000;
+
+    /* Text Style */
+    --primary-font: 'Poppins', sans-serif;
+    --secondary-font: 'Oswald', sans-serif;
+    --primary-text: #021832;
+    --secondary-text: #caa169;
+    --text-white: #fff;
+    --text-black: #151515;
+    --text-gray: #e4e4e4;
+}
+
+body {
+    font-family: var(--primary-font);
+    background-color: var(--bg-white);
+}
+
+a {
+    text-decoration: none;
+}
+
+::-webkit-scrollbar {
+    width: .375rem;
+}
+
+::-webkit-scrollbar-track {
+    background: var(--secondary-color);
+}
+
+::-webkit-scrollbar-thumb {
+    background: var(--primary-color);
+}
+
+section {
+    padding: 3.125rem 0;
+}
+
+.main-btn {
+    font-size: 1rem;
+    font-weight: 500;
+    color: var(--primary-color);
+    text-transform: uppercase;
+    background-color: transparent;
+    border: .0625rem solid var(--primary-color);
+    padding: .375rem 1.875rem;
+    border-radius: 3.125rem;
+    line-height: 1.75rem;
+    display: inline-block;
+    transition: all 0.3s ease-out 0s;
+}
+
+.main-btn:hover {
+    background-color: var(--secondary-color);
+    border-color: var(--secondary-color);
+    color: var(--text-white);
+}
+
+h1 {
+    font-size: 3.75rem;
+    line-height: 4.25rem;
+    font-weight: 700;
+    color: var(--text-white);
+    margin-bottom: 1.25rem;
+    text-transform: uppercase;
+    font-family: var(--secondary-font);
+}
+
+h3 {
+    margin-bottom: 1.875rem;
+    line-height: 2.875rem;
+    font-weight: 700;
+    font-size: 2.25rem;
+    color: var(--primary-text);
+    font-family: var(--secondary-font);
+}
+
+h3 span {
+    color: var(--secondary-text);
+}
+
+h5 {
+    font-size: 1.5rem;
+    line-height: 1;
+    color: var(--primary-text);
+    margin-bottom: .9375rem;
+    font-weight: 500;
+    font-family: var(--secondary-font);
+
+}
+
+h6 {
+    font-size: .875rem;
+    color: var(--primary-text);
+    margin-bottom: .9375rem;
+    text-transform: uppercase;
+    font-weight: 300;
+    font-family: var(--secondary-font);
+}
+
+p {
+    font-size: 1rem;
+    color: var(--text-black);
+    line-height: 1.625rem;
+}
+
+.section-title:after {
+    content: "";
+    background-image: url('Assest/title-icon.webp');
+    background-position: center center;
+    background-repeat: no-repeat;
+    display: block;
+    margin-top: -0.9375rem;
+    height: .9375rem;
+}
+/* 6 Services */
+.service-item-wrap {
+    background-color: var(--bg-color);
+}
+
+.service-menu-area ul li a {
+    display: block;
+    margin-bottom: 2.8125rem;
+}
+
+.service-menu-area ul li a .service-icon {
+    height: 5.625rem;
+    width: 5.625rem;
+    background-color: var(--secondary-color);
+    line-height: 5.625rem;
+    text-align: center;
+    border-radius: 100%;
+    float: left;
+    -webkit-transition: all 0.3s ease-in-out;
+    transition: all 0.3s ease-in-out;
+}
+
+.service-menu-area ul li a .service-icon:hover,
+.service-menu-area ul li a.active .service-icon {
+    background-color: #021832;
+    color: #fff;
+    box-shadow: 0 .125rem 1.25rem rgb(34 30 31 / 40%);
+}
+
+.service-menu-area ul li:nth-child(1) {
+    margin-left: 0.5625rem;
+}
+
+.service-menu-area ul li:nth-child(2) {
+    margin-left: -2.9375rem;
+}
+
+.service-menu-area ul li:nth-child(3) {
+    margin-left: -6.375rem;
+}
+
+.service-menu-area ul li:nth-child(4) {
+    margin-left: -8.8125rem;
+}
+
+.service-menu-area ul li a p,
+.service-menu-area ul li a h5 {
+    padding-left: 6.875rem;
+    display: block;
+    text-align: left;
+}
+
+.service-menu-area ul li a p span {
+    color: var(--secondary-text)
+}
+
+
+    </style>
+    <section id="services" class="services_wrapper">
+        <div class="container">
+            <div class="row">
+                <div class="col-sm-12 section-title text-center mb-5">
+                    <h6>We Are Here For You</h6>
+                    <h3>Our Awesome Services</h3>
+                </div>
+            </div>
+            <div class="row align-items-center service-item-wrap">
+                <div class="col-lg-7 p-lg-0">
+                    <!--Service Area Start-->
+                    <div class="tab-content" id="myTabContent">
+                        <div class="tab-pane fade active show" id="spa" role="tabpanel">
+                            <img src="./service1.webp" alt="">
+                        </div>
+                        <div class="tab-pane fade" id="restaurent" role="tabpanel">
+                            <img src="./service2.webp" alt="">
+                        </div>
+                        <div class="tab-pane fade" id="swimming" role="tabpanel">
+                            <img src="./service3.webp" alt="">
+                        </div>
+                        <div class="tab-pane fade" id="conference" role="tabpanel">
+                            <img src="./service6.webp" alt="">
+                        </div>
+                    </div>
+                    <!--Service Area End-->
+                </div>
+                <div class="col-lg-5 position-relative">
+                    <!--Service Tab Menu Area Start-->
+                    <div class="service-menu-area">
+                        <ul class="nav">
+                            <li>
+                                <a data-bs-toggle="tab" href="#spa" class="active">
+                                    <span class="service-icon">
+                                        <img src="./service-icon1.webp" alt="">
+                                    </span>
+                                    <h5>Spa, beauty & Health</h5>
+                                    <p><span>Spa and beauty </span>luptatem quia voluptas sit aspernatur aut odit aut
+                                        fugit, sed quia </p>
+                                </a>
+                            </li>
+                            <li>
+                                <a data-bs-toggle="tab" href="#restaurent">
+                                    <span class="service-icon">
+                                        <img src="./service-icon2.webp" alt="">
+                                    </span>
+                                    <h5>Restaurant</h5>
+                                    <p><span>Restaurant</span> lup provide grro tatem quia voluptas sit aspernatur aut
+                                        odit aut fugit, </p>
+                                </a>
+                            </li>
+                            <li>
+                                <a data-bs-toggle="tab" href="#swimming">
+                                    <span class="service-icon">
+                                        <img src="./service-icon3.webp" alt="">
+                                    </span>
+                                    <h5>Swimming Pool</h5>
+                                    <p><span>Swimming</span> pool luptatem quia voluptas sit aspernatur aut odit aut
+                                        fugit, sed quia </p>
+                                </a>
+                            </li>
+                            <li>
+                                <a data-bs-toggle="tab" href="#conference">
+                                    <span class="service-icon">
+                                        <img src="./service-icon4.webp" alt="">
+                                    </span>
+                                    <h5>Conference Hall</h5>
+                                    <p><span>Conference</span> luptatem quia voluptas sit aspernatur aut odit aut fugit,
+                                        sed quia </p>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                    <!--Service Tab Menu Area End-->
+                </div>
+            </div>
+        </div>
+        
+    </section>
+    <!-- Services section Exit -->
+
+       <!-- Bootstrap 5 JS CDN Links -->
+       <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/2.9.2/umd/popper.min.js"></script>
+       <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/5.1.0/js/bootstrap.min.js"></script>
+
+    
+
+</body>
+
+</html>
